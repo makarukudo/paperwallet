@@ -1,6 +1,6 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
+  padding: 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,12 +8,22 @@
 }
 
 .main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 10px 20px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+@media print {
+  .main {
+    border: 1px dashed #777 !important;
+    border-bottom: 0px !important;
+  }
+}
+
+.main h1 {
+  text-align: center;
 }
 
 .footer {
@@ -35,88 +45,58 @@
   align-items: center;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.paper {
+  min-width: 500px;
+  border: 4px solid black;
+  border-radius: 10px;
+  margin: 20px 0px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.paperHeading {
+  padding: 14px;
+  font-size: 0.9em;
+  border-bottom: 4px solid black;
 }
 
-.title,
-.description {
+.paperBody {
+  padding: 14px;
+  display: flex;
+  flex-direction: row;
   text-align: center;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
+.paperFooter {
+  padding: 10px;
+  font-size: 0.7em;
+  font-weight: normal;
+  border-top: 4px solid black;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
+.paperClone {
+  transform: rotate(180deg);
 }
 
 @media (max-width: 600px) {
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+@media print {
+  .hiddenPrint, .hiddenPrint * {
+    display: none !important;
   }
 }
