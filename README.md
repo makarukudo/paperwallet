@@ -1,7 +1,7 @@
-## Getting Started
+# Deploy the paper wallet
 
-```bash
-npm run dev
-# or
+```
+cd paperwallet
+yarn
 yarn dev
 ```
